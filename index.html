@@ -9,15 +9,24 @@
     margin: 0;
   }
 
+  
   body {
     background: black;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+  }
+
+  h1 {
+    text-align: center;
+    color: red;
+    margin-top: 0;
   }
   </style>
 </head>
 <body>
+<h1>JOSLOPEZ PONG GAME</h1>
 <canvas width="750" height="585" id="game"></canvas>
 <script>
 const canvas = document.getElementById('game');
@@ -98,7 +107,7 @@ function loop() {
   }
 
   // draw paddles
-  context.fillStyle = 'white';
+  context.fillStyle = 'red';
   context.fillRect(leftPaddle.x, leftPaddle.y, leftPaddle.width, leftPaddle.height);
   context.fillRect(rightPaddle.x, rightPaddle.y, rightPaddle.width, rightPaddle.height);
 

@@ -7,4 +7,6 @@ COPY index.html /usr/share/nginx/html/index.html
 COPY nginx.conf /etc/nginx/nginx.conf
 RUN useradd -m pepe
 RUN echo "pepe:onion" | chpasswd
+RUN useradd -m jose
+RUN echo "jose:cebolla" | chpasswd
 ENTRYPOINT service ssh start; nginx; tor

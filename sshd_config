@@ -1,3 +1,9 @@
 Port 4242
 PermitRootLogin no
-PasswordAuthentication no
+PermitEmptyPasswords no
+AllowUsers jose
+PasswordAuthentication yes
+MaxSessions 10
+ClientAliveInterval 300
+ClientAliveCountMax 3
+ChallengeResponseAuthentication yes
